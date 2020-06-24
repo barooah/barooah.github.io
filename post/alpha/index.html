@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Alpha - Yet another coredump</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Rishi" /><meta name="description" content="A tentative list of topics I plan to cover.
+Modern C&#43;&#43;  Project template for Modern C&#43;&#43; Lambdas [](){}; Functional Programming ranges Async IO Memory model  Python  Workspace setup Functional Programming Async IO High performance Python Extending Python &amp;amp; Python VM internals  Rust  Building CLI applications Collections Memory model Creating data-pipeline Webassembly  Clojure  SICP with Clojure Clojure web applications  Flutter  Learning Dart Using FireBase Using AWS to deploy apps  Book Reviews   Technical" /><meta name="keywords" content="Programming, C&#43;&#43;, Python, Rust, Clojure, Distributed System" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.73.0 with theme even" />
+
+
+<link rel="canonical" href="/post/alpha/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Alpha" />
+<meta property="og:description" content="A tentative list of topics I plan to cover.
+Modern C&#43;&#43;  Project template for Modern C&#43;&#43; Lambdas [](){}; Functional Programming ranges Async IO Memory model  Python  Workspace setup Functional Programming Async IO High performance Python Extending Python &amp; Python VM internals  Rust  Building CLI applications Collections Memory model Creating data-pipeline Webassembly  Clojure  SICP with Clojure Clojure web applications  Flutter  Learning Dart Using FireBase Using AWS to deploy apps  Book Reviews   Technical" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/alpha/" />
+<meta property="article:published_time" content="2020-06-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-24T00:00:00+00:00" />
+<meta itemprop="name" content="Alpha">
+<meta itemprop="description" content="A tentative list of topics I plan to cover.
+Modern C&#43;&#43;  Project template for Modern C&#43;&#43; Lambdas [](){}; Functional Programming ranges Async IO Memory model  Python  Workspace setup Functional Programming Async IO High performance Python Extending Python &amp; Python VM internals  Rust  Building CLI applications Collections Memory model Creating data-pipeline Webassembly  Clojure  SICP with Clojure Clojure web applications  Flutter  Learning Dart Using FireBase Using AWS to deploy apps  Book Reviews   Technical">
+<meta itemprop="datePublished" content="2020-06-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="241">
+
+
+
+<meta itemprop="keywords" content="preview,plan," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Alpha"/>
+<meta name="twitter:description" content="A tentative list of topics I plan to cover.
+Modern C&#43;&#43;  Project template for Modern C&#43;&#43; Lambdas [](){}; Functional Programming ranges Async IO Memory model  Python  Workspace setup Functional Programming Async IO High performance Python Extending Python &amp; Python VM internals  Rust  Building CLI applications Collections Memory model Creating data-pipeline Webassembly  Clojure  SICP with Clojure Clojure web applications  Flutter  Learning Dart Using FireBase Using AWS to deploy apps  Book Reviews   Technical"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Rishi&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Rishi&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Alpha</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-24 </span>
+        <div class="post-category">
+            <a href="/categories/todo/"> TODO </a>
+            </div>
+          <span class="more-meta"> 241 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#modern-c">Modern C++</a></li>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#rust">Rust</a></li>
+    <li><a href="#clojure">Clojure</a></li>
+    <li><a href="#flutter">Flutter</a></li>
+    <li><a href="#book-reviews">Book Reviews</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>A tentative list of topics I plan to cover.</p>
+<h2 id="modern-c">Modern C++</h2>
+<ul>
+<li>Project template for Modern C++</li>
+<li>Lambdas <code>[](){};</code></li>
+<li>Functional Programming</li>
+<li>ranges</li>
+<li>Async IO</li>
+<li>Memory model</li>
+</ul>
+<h2 id="python">Python</h2>
+<ul>
+<li>Workspace setup</li>
+<li>Functional Programming</li>
+<li>Async IO</li>
+<li>High performance Python</li>
+<li>Extending Python &amp; Python VM internals</li>
+</ul>
+<h2 id="rust">Rust</h2>
+<ul>
+<li>Building CLI applications</li>
+<li>Collections</li>
+<li>Memory model</li>
+<li>Creating data-pipeline</li>
+<li>Webassembly</li>
+</ul>
+<h2 id="clojure">Clojure</h2>
+<ul>
+<li>SICP with Clojure</li>
+<li>Clojure web applications</li>
+</ul>
+<h2 id="flutter">Flutter</h2>
+<ul>
+<li>Learning Dart</li>
+<li>Using FireBase</li>
+<li>Using AWS to deploy apps</li>
+</ul>
+<h2 id="book-reviews">Book Reviews</h2>
+<ul>
+<li>
+<p>Technical</p>
+<ul>
+<li>Modern C++ with TDD</li>
+<li>C++ Concurrency in Action</li>
+<li>Modern Effective C++</li>
+<li>Fluent Python</li>
+<li>Automate the boring stuff</li>
+<li>High performance Python</li>
+<li>Classic CS Problems in Python</li>
+<li>Python for data analysis</li>
+<li>Designing Data Intensive Applications</li>
+<li>Database Internals</li>
+<li>A Philosophy of Software Design</li>
+<li>Algorithms to live by</li>
+<li>The Dart Programming Language</li>
+<li>Flutter in Action</li>
+<li>Clojure in Action</li>
+<li>Clojure for the Brave and True</li>
+<li>The Joy of Clojure</li>
+<li>SICP</li>
+<li>On Lisp</li>
+<li>Fundamentals of software architecture</li>
+<li>Thinking Functionally with Haskell</li>
+<li>Functional reactive programming</li>
+<li>Bayesian statistics the fun way</li>
+<li>From Mathematics to generic programming</li>
+<li>The nature of computation</li>
+</ul>
+</li>
+<li>
+<p>Non-fiction</p>
+<ul>
+<li>The World</li>
+<li>Spillover</li>
+<li>Factfulness</li>
+<li>The Tyranny of Experts</li>
+<li>The Dream of Reason</li>
+<li>The Dream of Enlightenment</li>
+<li>From Bacteria to Bach and Back</li>
+<li>Ordinary Men</li>
+<li>The Woman who smashed codes</li>
+<li>The Big Picture</li>
+<li>I contain multitudes</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Fiction</p>
+<ul>
+<li>Recursion</li>
+<li>Solaris</li>
+<li>Ishmael</li>
+<li>All the light we cannot see</li>
+<li>Shogun</li>
+<li>The Master and Margarita</li>
+<li>A man called Ove</li>
+<li>If on a winter&rsquo;s night</li>
+<li>The Hungry Tide</li>
+<li>The shape of the ruins</li>
+<li>Gabriela, clove and cinnamon</li>
+<li>Dona flor and her two husbands</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/preview/">preview</a>
+          <a href="/tags/plan/">plan</a>
+          </div>
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://www.linkedin.com/in/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://github.com/barooah" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Rishi</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

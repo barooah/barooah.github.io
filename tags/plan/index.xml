@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plan on Yet another coredump</title>
+    <link>/tags/plan/</link>
+    <description>Recent content in plan on Yet another coredump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/plan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Alpha</title>
+      <link>/post/alpha/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/alpha/</guid>
+      <description>A tentative list of topics I plan to cover.
+Modern C++  Project template for Modern C++ Lambdas [](){}; Functional Programming ranges Async IO Memory model  Python  Workspace setup Functional Programming Async IO High performance Python Extending Python &amp;amp; Python VM internals  Rust  Building CLI applications Collections Memory model Creating data-pipeline Webassembly  Clojure  SICP with Clojure Clojure web applications  Flutter  Learning Dart Using FireBase Using AWS to deploy apps  Book Reviews   Technical</description>
+    </item>
+    
+  </channel>
+</rss>
